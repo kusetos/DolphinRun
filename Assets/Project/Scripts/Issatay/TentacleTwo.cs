@@ -16,6 +16,7 @@ public class TentacleTwo : MonoBehaviour
     public float wiggleSpeed;
     public float wiggleMagnitude;
     public Transform wiggleDir;
+    public Transform tileEnd;
 
     private void Start()
     {
@@ -39,6 +40,8 @@ public class TentacleTwo : MonoBehaviour
             Vector3 targetPosition = segmentPoses[i-1] + (segmentPoses[i] - segmentPoses[i-1]).normalized * targetDistance;
             segmentPoses[i] = Vector3.SmoothDamp(segmentPoses[i], targetPosition, ref segmentV[i], smoothSpeed);
         }
+        tileEnd.position = segmentPoses[segmentPoses.Length-1];
+        //tileEnd.rotation = wiggleDir.localRotation;
         lineRenderer.SetPositions(segmentPoses);
     }
 }

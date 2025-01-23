@@ -18,6 +18,8 @@ public class Tentacle : MonoBehaviour
     public float wiggleMagnitude;
     public Transform wiggleDir;
 
+    public Transform tileEnd;
+
     private void Start()
     {
         lineRenderer.positionCount = lengh;
@@ -37,6 +39,8 @@ public class Tentacle : MonoBehaviour
             ref segmentV[i],
             smoothSpeed + i / trailSpeed);
         }
+        tileEnd.position = segmentPoses[segmentPoses.Length-1];
+
         lineRenderer.SetPositions(segmentPoses);
     }
 }
