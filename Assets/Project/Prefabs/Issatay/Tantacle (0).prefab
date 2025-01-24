@@ -247,7 +247,7 @@ MonoBehaviour:
   targerDirection: {fileID: 2486767489777398017}
   targetDistance: 0.05
   smoothSpeed: 0.001
-  trailSpeed: 1000
+  trailSpeed: 700
   wiggleSpeed: 5
   wiggleMagnitude: 5
   wiggleDir: {fileID: 2524735598055954931}
