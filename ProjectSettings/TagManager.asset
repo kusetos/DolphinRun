@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bubble
   layers:
   - Default
   - TransparentFX
@@ -11,8 +12,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Bubble
   - 
   - 
   - 
@@ -40,4 +41,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackTile
+    uniqueID: 1834437761
+    locked: 0
+  - name: MiddleTile
+    uniqueID: 4192972909
+    locked: 0
+  - name: FrontTile
+    uniqueID: 2594723245
+    locked: 0
+  - name: Bubble
+    uniqueID: 479636025
+    locked: 0
+  - name: Tale
+    uniqueID: 2035090611
+    locked: 0
+  - name: Player
+    uniqueID: 3217759169
+    locked: 0
+  - name: UI
+    uniqueID: 3729256517
     locked: 0
