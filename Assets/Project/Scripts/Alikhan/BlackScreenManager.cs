@@ -29,6 +29,7 @@ public class BlackScreenManager : MonoBehaviour
     public void FadeScreenOut()
     {
         blackScreen.gameObject.SetActive(true);
+        blackScreen.color = new Color(0, 0, 0, 1);
         blackScreen.DOFade(0, FadeTime);
     }
 }

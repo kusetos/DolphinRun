@@ -38,12 +38,13 @@ public class Shooting2 : MonoBehaviour
             Instance = this;
     }
 
-    // Update is called once per frame
+    private bool isDead = false;
     void Update()
     {
-        if (bubbleAmount <= 0)
+        if (bubbleAmount <= 0 && !isDead)
         {
             DeathManager.Instance.OnDeath();
+            isDead = true;
         }
 
         mousePos = mainCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
