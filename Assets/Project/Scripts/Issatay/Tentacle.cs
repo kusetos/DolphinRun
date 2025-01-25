@@ -39,6 +39,7 @@ public class Tentacle : MonoBehaviour
             ref segmentV[i],
             smoothSpeed + i / trailSpeed);
         }
+        if(tileEnd)
         tileEnd.position = segmentPoses[segmentPoses.Length-1];
 
         lineRenderer.SetPositions(segmentPoses);
