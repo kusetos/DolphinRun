@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Shooting2 : MonoBehaviour
 {
+    public static Shooting2 Instance;
+
     private Camera mainCam;
     private Vector3 mousePos;
 
@@ -11,6 +15,7 @@ public class Shooting2 : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletStart;
 
+    public int bubbleAmount = 100;
     public float bulletSpeed = 30.0f;
     public float fireRate = 0.5f; 
 
@@ -23,9 +28,24 @@ public class Shooting2 : MonoBehaviour
         Cursor.visible = false;
     }
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+            Instance = this;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (bubbleAmount <= 0)
+        {
+            DeathManager.Instance.OnDeath();
+        }
+
         mousePos = mainCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
         crosshairs.transform.position = new Vector2(mousePos.x, mousePos.y);
 
@@ -70,5 +90,6 @@ public class Shooting2 : MonoBehaviour
         b.transform.position = bulletStart.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+        bubbleAmount--;
     }
 }
