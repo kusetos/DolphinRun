@@ -7,7 +7,7 @@ public class Spike : Obstacle
     public GameObject visual;
     private void Start()
     {
-        visual.gameObject.SetActive(false);
+        //visual.gameObject.SetActive(false);
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
