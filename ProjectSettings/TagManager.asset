@@ -54,6 +54,9 @@ TagManager:
   - name: Bubble
     uniqueID: 479636025
     locked: 0
+  - name: GameplayObject
+    uniqueID: 1959915975
+    locked: 0
   - name: Tale
     uniqueID: 2035090611
     locked: 0

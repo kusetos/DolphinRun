@@ -7,7 +7,7 @@ public class FinishManager : MonoBehaviour
     public SpriteRenderer visual;
     private void Start()
     {
-        visual.enabled = false;
+        //visual.enabled = false;
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
