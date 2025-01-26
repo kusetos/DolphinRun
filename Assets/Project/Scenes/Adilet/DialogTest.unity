@@ -3257,12 +3257,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4282302032874068224, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -2.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4282302032874068224, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.02
+      objectReference: {fileID: 0}
     - target: {fileID: 6154976966557867924, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5007308930637183468, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
+    - {fileID: 2221125793055229052, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
+    - {fileID: 581981337076198094, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
+    - {fileID: 6855147657673356904, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
+    - {fileID: 5523180967788999799, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
+    - {fileID: 1959830600020632679, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c37defc44f0194d8ade11a871d66b2, type: 3}
