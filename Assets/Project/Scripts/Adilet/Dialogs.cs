@@ -20,8 +20,6 @@ public class Dialogs : MonoBehaviour
         
         currentMessages = messages;
         currentActors = actors;
-        for (int i = 0; i < currentActors.Length; i++)
-                dialogBoxes[i].backGroundBox.transform.localScale = Vector3.zero;
         activeMessage = 0;
         DisplayMessage();
     }
@@ -51,11 +49,12 @@ public class Dialogs : MonoBehaviour
         }
     }
 
-    /*void Start()
+    void Start()
     {
-        for (int i = 0; i < currentActors.Length; i++)
+        for (int i = 0; i <  dialogBoxes.Length; i++)
                 dialogBoxes[i].backGroundBox.transform.localScale = Vector3.zero;
-    }*/
+        MusicManager.Instance.PlayMusic("Music");
+    }
 
     void Update()
     {

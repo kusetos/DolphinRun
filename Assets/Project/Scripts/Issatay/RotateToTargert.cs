@@ -44,6 +44,7 @@ public class RotateToTargert : MonoBehaviour
 
     private void BubbleImpact()
     {
+        SoundManager.Instance.PlaySound2D("1");
         _rb.AddForce(-(_direction * _bubbleImpactSpeed));
     }
 }
