@@ -8,9 +8,14 @@ public class DialogBox : MonoBehaviour
     public Actor[] actors;
     public Dialogs Box;
 
-    public void Start()
+    public void StartBox()
     {
         Box.OpenDialogue(messages, actors);
+    }
+
+    public void End()
+    {
+        Application.Quit();
     }
 }
 
